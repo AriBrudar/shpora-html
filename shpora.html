@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- метатег viewport -->
+    <!-- device-width - ширина страницы равная ширине устройства -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+</head>
+<body>
+    
+<!-- Теги
+    заголовок и параграф -->
+        <h1>Hello, World!</h1>
+    <!-- заголовки идут от h1 до h6 уровня от высшего к низшему -->
+        <p>paragraph</p>
+        <pre>с сохранением отступов в тексте</pre>
+
+    <!-- списки или wrapper -->
+        <ul> <!-- это маркированный список -->
+            <li>элемент этого списка </li>
+        </ul> 
+
+        <ol> <!-- нумерованный список -->
+            <li>также элемент списка</li>
+        </ol>
+
+<!-- Атрибуты -->
+    <p title="Всплывающая подсказка">текст подсказки</p>
+
+<!-- Начертания -->
+    <b>жирное простое</b>
+    <strong>жирное важная часть текста</strong>
+
+    <i>курсив не несущий смысловой нагрузки</i> 
+    <em>курсивв с логическим акцентом</em>
+
+<!-- Таблицы -->
+    <table>Область в которую мы вписываем код</table>
+    <tr>строка таблицы</tr>
+    <thread>шапка</thread>
+    <th>ячейка шапки</th>
+    <tbody>тело таблицы</tbody>
+    <td>ячейка</td>
+    <caption>заголовок таблицы</caption>
+
+<!-- пример таблицы с двумя строками и тремя столбцами (ячейками) -->
+    <table>
+        <caption>название таблицы</caption>
+        <thread>
+            <tr>
+                <th>название 1</th>
+                <th>название 2</th>
+            </tr>
+        </thread>
+
+        <tbody>
+            <tr>
+                <td>название 1</td>
+                <td>название 2</td>
+                <td>название 3</td>
+            </tr>
+        </tbody>
+    </table>
+
+<!-- Объединение ячеек внитри строк и столбцов -->
+<td colspan="2">по горизонтали</td>
+<td rowspan="2">по вертикали</td>
+
+<!-- Ссылки -->
+<a href="ссылка">тескт ссылки</a>
+
+<!-- ссылка якорь для перемещения в документе -->
+<a href="#link">текст</a>   <!-- название индефикатора -->
+    <div id="link"></div>
+
+<!-- вставка компьютерного кода в html -->
+<!-- формула --> <code> + tag <pre> or <p> (</p></pre></code>)
+
+<code>
+    &lt;<span>p</span>&gt;пишем какойто текст&lt;<span>/p</span>&gt;
+</code>
+
+<!-- изображения -->
+
+<img src="/imges.png" alt="описание картинки текстом" width="320" height="240">
+
+<!-- audio -->
+
+<audio src="ссылка" controls></audio> 
+    <!-- controls - элемент интерфейса для плеера -->
+
+<audio controls>
+    <source src="">
+</audio>
+    <!-- source путь к другим форматам аудиофайлов -->
+
+<!-- video -->
+<video src="ссылка" width="320" height="240" controls></video>
+<video type = "video/mp4"></video>
+
+<!-- метатеги - показывают заголовок и описание к текущей странице -->
+
+<title>назваие страницы 50-80 символов</title>
+<meta> - описание с двумя атрибутами
+name = "description" - тип информации
+name = "keywords" - ключевые слова 
+content - сама иформация, ключевые слова для поиска
+
+<meta name="discription" content="text">
+
+<!-- link - установка фавиконок -->
+<!-- rel- указвние контента, href- ссылка-->
+
+<link rel="icon" href="ссылка" type="image/png" sizes ="32*33"> 
+<!-- подключение файла CSS к HTML-странице -->
+<link rel="stylesheet" href="style.CSS">
+
+<!-- формы для ввода текста -->
+<!--  <input type="text/password/checkbox"> -->
+<form>
+    <label>
+        введите имя
+        <input type="text"> 
+    </label>
+</form>
+
+<form>
+    <label>
+        введите пароль
+        <input type="password" id="pin" plauholder="1234"> 
+    </label>
+</form>
+
+<form>
+    <label>
+        введите текст
+        <input type="checkbox" name="languages" value="HTML"> 
+    </label>
+    <br>
+</form>
+
+<!-- Радиокнопка - с одним выбором -->
+
+<form>
+    <label>
+        введите текст
+        <input type="radio" name="languages" value="HTML"> 
+    </label>
+    <br>
+</form>
+
+<!-- выпадающий список -->
+
+<!-- выбрать один вариант -->
+
+<form>
+    <label for="state"> State:
+    <select id="state">
+        <option disabled>вопрос</option>
+        <option>выборочный элемент</option>
+        <option>выборочный элемент</option>
+        <option>выборочный элемент</option>
+    </select>
+    </label>
+</form>
+
+<!-- несколько вариантов выбора -->
+
+<form>
+    <label for="state"> State:
+    <select multiple id="state">
+        <option disabled>вопрос</option>
+        <option>выборочный элемент</option>
+        <option>выборочный элемент</option>
+        <option>выборочный элемент</option>
+    </select>
+    </label>
+</form>
+
+<!-- textarea - поле для ввода текста -->
+
+<form action="/people">
+    <label for="state"> State:
+    <textarea id="state" rows="5" cols="30">
+    </textarea>
+</form>
+
+<!-- кнопка отправки -->
+
+<form action="/send">
+    <button>send</button>  
+</form>
+
+<!-- форма поиска с разными полями -->
+
+<h2>форма поиска</h2>
+<form action="/search">
+    <label for="state"> State:
+        Введите ваш запрос
+        <input type = "search">
+    </label>
+    <br>
+    <select multiple id="state">
+        <option disabled>В каком разделе искать?</option>
+        <option></option>
+        <option></option>
+    </select>
+    <button>искатть</button>
+</form>
+
+<!-- Семантические элементы -->
+<article>самостоятельная секция с заголовком (<h3>text</h3>) - валюта, погода</article>
+
+<main>
+<section class = "more">
+    <h2>читайте также</h2>
+        <article class="article-block"
+            <h3>услуга 2</h3>
+            <p>описание услуги</p>
+        <a href ="#smth">ссылка на услугу</a>   
+</section>
+</main>
+
+<aside>сайдбар - боковая панель с виджетами, меню раздела</aside>
+<!-- пишется после <header> -->
+
+<aside>
+    <nav>
+        <ul>
+            <li><a href ="/service-1/">услуга 1</a></li>
+        </ul>
+    </nav>
+</aside>
+<!-- если боковая панель уникальа для каждой странице она пишется внитри тега <main> -->
+
+<footer>подвал сайта - логотип, дополнительая и юридическая иформация, контакты</footer>
+<header>шапка сайта - логотип, меню, контакты</header>
+
+<header>
+    <img src="/iink" alt="link name">
+    <div id = "menu">
+        <ul>
+            <li><a href = "/main">Главная</a></li>
+            <li><a href = "/about">о нас</a></li>
+            <li><a href = "/contacts">контакты</a></li>
+        </ul>
+    </div>
+</header>
+
+<main>уникальный контент сайта - услуги, информация</main>
+<!-- текст -->
+
+<main>
+    <h1>text</h1>
+    <p>about text</p>
+    <section>
+        <h2>subsection</h2>
+    </section>
+</main>
+
+<!-- заявка -->
+
+<main>
+    <h1>text</h1>
+    <p>about text</p>
+    <section class = "callback-form">
+        <h2>оставить заявку</h2>
+            <form>
+                <label>
+                введите текст
+                    <input type="checkbox" name="languages" value="HTML"> 
+                </label>
+                    <br>
+            </form>
+    </section>
+</main>
+
+<nav> основное меню сверху или навигация по странице</nav>
+
+<img src="/iink" alt="link name">
+    <nav id = "menu">
+        <ul>
+            <li><a href = "/main">Главная</a></li>
+            <li><a href = "/about">о нас</a></li>
+            <li><a href = "/contacts">контакты</a></li>
+        </ul>
+    </nav>
+
+<section>секция</section>
+
+<img src="/iink" alt="link name">
+    <section id = "menu">
+        <ul>
+            <li><a href = "/main">Главная</a></li>
+            <li><a href = "/about">о нас</a></li>
+            <li><a href = "/contacts">контакты</a></li>
+        </ul>
+    </section>
+
+<!-- микроразметка компании (в header)-->
+
+<section>
+    <h1>Компания</h1>
+    <p>адрес</p>
+    <p>телефон</p>
+    <p>e-mail</p>
+</section>
+
+<!-- атрибуты подсказки -->
+
+-itemcore - указывает связь, пишется у главного блока
+-itemtype - указатель на используемый словарь 
+ <section>
+    <itemtype ="/link"></itemtype>
+ </section>
+-itemprop - адрес предприятия
+<p><span>
+    <itemprop = "adress/telephone/e-mail"></itemprop>
+</span></p>
+
+</body>
+</html>
